@@ -14,6 +14,7 @@ public class Task8 {
     }
 
     public enum SymbolType {
+
         OP_PLUS, OP_MINUS, OP_MUL, OP_DIV,
         NUMBER,
         EOF;
@@ -132,7 +133,7 @@ public class Task8 {
                     value -= multdiv(symbols);
                     break;
                 case EOF:
-
+                    return value;
                 default:
                     throw new RuntimeException("Unexpected token: " + symbol.value
                             + " at position: " + symbols.getPos());
